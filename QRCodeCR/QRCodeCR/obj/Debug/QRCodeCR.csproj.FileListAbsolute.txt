@@ -81,3 +81,5 @@ C:\Projects\QRCode\QRCodeCR\QRCodeCR\obj\Debug\QRCodeCR.csproj.CoreCompileInputs
 C:\Projects\QRCode\QRCodeCR\QRCodeCR\obj\Debug\QRCodeCR.csproj.CopyComplete
 C:\Projects\QRCode\QRCodeCR\QRCodeCR\obj\Debug\QRCodeCR.dll
 C:\Projects\QRCode\QRCodeCR\QRCodeCR\obj\Debug\QRCodeCR.pdb
+C:\Projects\QRCode\QRCodeCR\QRCodeCR\bin\Dapper.dll
+C:\Projects\QRCode\QRCodeCR\QRCodeCR\bin\Dapper.xml

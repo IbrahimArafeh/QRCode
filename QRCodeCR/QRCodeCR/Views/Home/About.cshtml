@@ -5,3 +5,25 @@
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+
+<script>
+
+    function savePdfFile() {
+        $(document).ready(function () {
+            $.ajax({
+                url: '/Home/About',
+                dataType: "JSON",
+                type: "POST",
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                data: { PDFFile: _pdfFile },
+                async: true,
+                processData: true,
+                cache: false,
+                complete: function () { },
+                beforeSend: function () { },
+                success: function () { },
+                error: function () { },
+            });
+        });
+    }
+</script>
