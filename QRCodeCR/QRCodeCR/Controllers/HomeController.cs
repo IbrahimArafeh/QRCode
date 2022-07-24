@@ -80,7 +80,10 @@ namespace QRCodeCR.Controllers
                 {
                     barcodeBitmap.Save(memory, ImageFormat.Jpeg);
                     byte[] bytes = memory.ToArray();
+
                     fs.Write(bytes, 0, bytes.Length);
+
+                    
                 }
             }
             return imagePath;
@@ -105,6 +108,7 @@ namespace QRCodeCR.Controllers
             {
                 barcodeText = result.Text;
             }
+
             return new QRCodeModel() { QRCodeText = barcodeText, QRCodeImagePath = imagePath };
         }
 
@@ -201,6 +205,17 @@ namespace QRCodeCR.Controllers
 
         }
         #endregion
+
+        private void changeImageToDecimal(HttpPostedFileBase files)
+        {
+            Stream str = files.InputStream;
+            BinaryReader Br = new BinaryReader(str);
+            Byte[] FileDet = Br.ReadBytes((Int32)str.Length);
+
+            FileDetailsModel Fd = new FileDetailsModel();
+            Fd.FileName = files.FileName;
+            Fd.FileContent = FileDet;
+        }
     }
 
 }
